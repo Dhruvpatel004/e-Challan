@@ -141,5 +141,5 @@ display: inline-block;
 @media (max-width:600px) {
     .change1
     {
-      font-size: small;
+      font-size: 20px;
     }}
