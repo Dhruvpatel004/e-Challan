@@ -137,3 +137,9 @@ display: inline-block;
   .nav-title{
     margin-left: 20px;
   }
+
+@media (max-width:600px) {
+    .change1
+    {
+      font-size: small;
+    }}
