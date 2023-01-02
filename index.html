@@ -22,9 +22,7 @@
 
 <body>
     <!-- Navigation-->
-    <div class="nav" id="navp" style=" position:fixed ;
-    color: black;
-    z-index: 1000">
+    <div class="nav" id="navp">
         <input type="checkbox" id="nav-check">
 
         <div class="nav-header">
@@ -45,7 +43,7 @@
         </div>
 
         <div class="nav-links">
-            <a href="#home">Home </a>
+            <a href="#home">Home</a>
             <a href="https://echallanpayment.gujarat.gov.in/sasguj/static/UserManuals.pdf" target="_blank">Manual</a>
             <a href="https://echallanpayment.gujarat.gov.in/sasguj/static/GeneralInstructions.pdf"
                 target="_blank">Guidelines</a>
@@ -78,17 +76,20 @@
                                 <div class="col">
                                     <!-- <label for="" class=" ">Enter Your Vehchal Number :</label> -->
 
-                                    <input class="form-control form-control-lg change1" id="emailAddress" type="text"
+                                    <input class="form-control form-control-lg change1" id="num" type="text"
                                         placeholder="Enter Vehicle Number eg:GJ00xx0000"
-                                        data-sb-validations="required,text" />
-                                    <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">
-                                        Vehicle Number is required.</div>
-                                    <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:text">No
+                                        data-sb-validations="required,text" required>
+                                    <span id="message" class="text-white"></span>
+                                    <div class="invalid-feedback text-white" data-sb-feedback="num:required">
+                                        Vehicle Number is required.
+
+                                    </div>
+                                    <div class="invalid-feedback text-white" data-sb-feedback="num:text">No
                                         Record Found.</div>
                                 </div>
 
                                 <div class="col-auto"><button class="btn btn-primary btn-lg " id="submitButton"
-                                        type="submit">Go !</button></div>
+                                        type="submit" onmouseover="check()">Go !</button></div>
                             </div>
                             <!-- Submit success message-->
                             <!---->
@@ -167,8 +168,7 @@
                 </div>
             </div>
             <div class="row g-0">
-                <div class="col-lg-6 text-white showcase-img"
-                    style="background-image: url('ruleimg/r2.svg');background-repeat: no-repeat;
+                <div class="col-lg-6 text-white showcase-img" style="background-image: url('ruleimg/r2.svg');background-repeat: no-repeat;
                     background-size:contain;background-position: center center;"></div>
                 <div class="col-lg-6 my-auto showcase-text">
                     <h2>Always Own Valid Car Insurance Policy</h2>
@@ -183,8 +183,7 @@
                 </div>
             </div>
             <div class="row g-0">
-                <div class="col-lg-6 order-lg-2 text-white showcase-img"
-                    style="background-image: url('ruleimg/r3.jpg');background-repeat: no-repeat;
+                <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('ruleimg/r3.jpg');background-repeat: no-repeat;
                     background-size:contain;background-position: center center;"></div>
                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                     <h2>Wear your seatbelt while Driving a Car</h2>
@@ -199,8 +198,7 @@
                 </div>
             </div>
             <div class="row g-0">
-                <div class="col-lg-6 text-white showcase-img"
-                    style="background-image: url('ruleimg/r4.png');background-repeat: no-repeat;
+                <div class="col-lg-6 text-white showcase-img" style="background-image: url('ruleimg/r4.png');background-repeat: no-repeat;
                     background-size:contain;background-position: center center;"></div>
                 <div class="col-lg-6 my-auto showcase-text">
                     <h2> Riding a Two-Wheeler without a Helmet On</h2>
@@ -217,8 +215,7 @@
             </div>
 
             <div class="row g-0">
-                <div class="col-lg-6 order-lg-2 text-white showcase-img"
-                    style="background-image: url('ruleimg/r5.jpg');background-repeat: no-repeat;
+                <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('ruleimg/r5.jpg');background-repeat: no-repeat;
                     background-size:contain;background-position: center center;"></div>
                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                     <h2>Using a Mobile Phone while Riding</h2>
@@ -232,8 +229,7 @@
                 </div>
             </div>
             <div class="row g-0">
-                <div class="col-lg-6 text-white showcase-img"
-                    style="background-image: url('ruleimg/r6.jpg');background-repeat: no-repeat;
+                <div class="col-lg-6 text-white showcase-img" style="background-image: url('ruleimg/r6.jpg');background-repeat: no-repeat;
                     background-size:contain;background-position: center center;"></div>
                 <div class="col-lg-6 my-auto showcase-text">
                     <h2>Over Speeding</h2>
@@ -248,8 +244,7 @@
             </div>
 
             <div class="row g-0">
-                <div class="col-lg-6 order-lg-2 text-white showcase-img"
-                    style="background-image: url('ruleimg/r7.png');background-repeat: no-repeat;
+                <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('ruleimg/r7.png');background-repeat: no-repeat;
                     background-size:contain;background-position: center center;"></div>
                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                     <h2>Jumping the Red Light</h2>
@@ -287,7 +282,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="assets/img/21cs037.CR2" alt="..." />
+                        <img class="img-fluid rounded-circle mb-3" src="assets/img/21cs037.jpg" alt="..." />
                         <h5>Jinesh Parekh ( 21CS037 )</h5>
                         <!-- <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to -->
                         <!-- us!"</p> -->
@@ -317,13 +312,16 @@
                 <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item me-4">
-                            <a href="https://www.facebook.com/samarth.pandya.3150?mibextid=ZbWKwL"><i class="bi-facebook fs-3"></i></a>
+                            <a href="https://www.facebook.com/samarth.pandya.3150?mibextid=ZbWKwL"><i
+                                    class="bi-facebook fs-3"></i></a>
                         </li>
                         <li class="list-inline-item me-4">
-                            <a href="https://twitter.com/Patel__Dhruv_?t=kgMX2TQ0pBV3MwJ5aYt-Tw&s=09"><i class="bi-twitter fs-3"></i></a>
+                            <a href="https://twitter.com/Patel__Dhruv_?t=kgMX2TQ0pBV3MwJ5aYt-Tw&s=09"><i
+                                    class="bi-twitter fs-3"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://instagram.com/jinesh__parekh?igshid=YmMyMTA2M2Y="><i class="bi-instagram fs-3"></i></a>
+                            <a href="https://instagram.com/jinesh__parekh?igshid=YmMyMTA2M2Y="><i
+                                    class="bi-instagram fs-3"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -339,6 +337,94 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script>
+        var intervalId = window.setInterval(function () {
+            // call your function here
+            var mobile = document.getElementById('num');
+
+
+            var message = document.getElementById('message');
+
+            var goodColor = "#ffffff";
+            // var badColor = "#f00a0a ";
+
+            if (mobile.value.length >= 9) {
+
+                mobile.style.backgroundColor = goodColor;
+                message.style.color = goodColor;
+                message.innerHTML = ""
+                document.querySelector('#submitButton').disabled = false;
+
+                // message.innerHTML = "required 10 digits, match requested format!"
+            }
+            // else if (mobile.value.length == 0) {
+            //     mobile.style.backgroundColor = white;
+            //     message.innerHTML = ""
+            //     ocument.querySelector('#submitButton').disabled = true;
+            // }
+            else  {
+
+                // mobile.style.backgroundColor = badColor;
+                // message.style.color = badColor;
+                message.innerHTML = "Enter Valid Vehicle Number!"
+                document.querySelector('#submitButton').disabled = true;
+            }
+
+            if(mobile.value.length == 0)
+            {
+                message.innerHTML = ""
+            }
+        }, 500);
+        // function check() {
+
+        //     var mobile = document.getElementById('num');
+
+
+        //     var message = document.getElementById('message');
+
+        //     var goodColor = "#03b800";
+        //     var badColor = "#f00a0a ";
+
+        //     if (mobile.value.length > 9) {
+
+        //         mobile.style.backgroundColor = goodColor;
+        //         message.style.color = goodColor;
+        //         document.querySelector('#submitButton').disabled = false;
+
+        //         // message.innerHTML = "required 10 digits, match requested format!"
+        //     }
+        //     else if (mobile.value.length < 9) {
+
+        //         mobile.style.backgroundColor = badColor;
+        //         message.style.color = badColor;
+        //         message.innerHTML = "Enter Valid Vehicle Number!"
+        //         document.querySelector('#submitButton').disabled = true;
+        //         // getElementById('submitButton').dis
+        //     }
+        // }
+        // // if (document.Entry.Number.length!== 7) {
+        // //     msg+="Your Number should be 7 digits. Please check this. \n";
+        // //     document.Entry.Number.focus();
+        // //     document.getElementById('Number').style.color="red";
+        // //     result = false;
+        // // }
+        // var len = document.getElementById('num').length;
+        // var intervalId = window.setInterval(function () {
+        //     // call your function here
+        //     len = document.getElementById('num').length;
+        //     if (len >= 9) {
+
+        //         document.getElementById("submitButton").disabled = false;
+        //         document.getElementById("")
+        //     }
+        //     else {
+        //         document.getElementById("submitButton").disabled = true;
+
+
+        //     }
+        // }, 100000);
+
+    </script>
     <!-- <script type='text/javascript'>
         var imageID = 0;
         function changeimage(every_seconds) {
