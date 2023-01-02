@@ -78,7 +78,7 @@
 
                                     <input class="form-control form-control-lg change1" id="num" type="text"
                                         placeholder="Enter Vehicle Number eg:GJ00xx0000"
-                                        data-sb-validations="required,text" required>
+                                        data-sb-validations="required,text" required oninput="this.value = this.value.toUpperCase()">
                                     <span id="message" class="text-white"></span>
                                     <div class="invalid-feedback text-white" data-sb-feedback="num:required">
                                         Vehicle Number is required.
